@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study_msa?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    username: root
+    password: '{cipher}AQCZPtgS4GbQ+4mm6bIPeWuvjZHf684dEt/u49T8QlgKBF7uCkaDvtwkKad5pxrtqI50vsxW16ANnXNZYberJi2qT4wzd+A0ijhWsKEah+sqDb5+Mbk0GqDJjnPoJ7GDMF7/Q42MKr3/jPmx+jNn7Zu/Ici4gjnK0K4I4pNeE4oSQUkvST0dhDfQKI0CTjUQBeJ3VWc90fZQuDrEsQjr87ohREYipCvNxGDyagkf+77KX4wSCsATBXcp/w0bBKqpRAv9j2s46iyUrSvdbj202fkTFl5xecL4Gsh7c12O09K+K167fUVP2oYGJhnzBZhGNNpwDITWhDMdqR8sEXJ0VgfLzij+2gt+ihDasiFXCQSDY2yP6seFm/oyx6fM+WUE+Wg='
+
+token:
+  expiration_time: 864000000
+  secret: '{cipher}AQADrAkDlqR93H2RjAanPnkgg1E38Sqjf7fxFYVZ614zLWq/daw6e5hb3jjt3y7leNXqDSblPdf7op+H+iuhJJf8WbrAdhCMh8ZbuC7Mgrk9wnTrntmtYdBvBtjshRg92wRdeh/8GVm+vO59pMU8sE0lpLNekBe/HU7nOTxup1GpmYIegUXGVtDB1ydDMLqxAwneKbgPQP4Jte96x+4LmHOfUFYnGXQ0q6LXPk8lzRSXyBMicvopuE9t8yK601XGkcb/KFgW2yKQs2dWpJUUxvzk44+/zI/NgAPr4Uv2Eqdr2qFRMoV53cE2vW5eNb2c7Eeo4hHZUGc9xR0ONQNsdflXe7CvQl7Cpjc0cFn7BU/RvNCbrCTWs41M9aKZvu82lSwoksKfVvu6ddKnnrr1cnDP'
+
+gateway:
+  ip: 192.168.56.1
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    orders_is_empty: There is no item
